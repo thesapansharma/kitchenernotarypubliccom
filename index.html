@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KITCHENER Notary Public &amp; Commissioner for Oaths</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&amp;family=Playfair+Display:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Luxury Palette */
+            --bg-body: #f8fafc;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --bg-dark: #0f172a;
+            --bg-navy: #1e293b;
+            --bg-subtle: #f1f5f9;
+            
+            /* Accent & Brand Colors */
+            --brand-navy: #0f172a;
+            --brand-primary: #1e3a5f;
+            --brand-blue: #2563eb;
+            --gold-primary: #d97706;
+            --gold-light: #f59e0b;
+            --gold-bright: #fbbf24;
+            --gold-gradient: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #b45309 100%);
+            --navy-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e293b 100%);
+            
+            /* Text */
+            --text-heading: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            --text-light: #94a3b8;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04);
+            --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+            --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.1), 0 10px 15px -5px rgba(15, 23, 42, 0.04);
+            --shadow-hero: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+            --shadow-gold: 0 10px 25px -5px rgba(217, 119, 6, 0.4);
+            
+            /* Typography */
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+            --font-brand: 'Cinzel', serif;
+            
+            /* Transitions */
+            --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            line-height: 1.75;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--text-heading);
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--brand-primary);
+            transition: var(--transition-smooth);
+        }
+
+        a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2a5f8f 60%, #1e40af 100%);
+            color: #ffffff;
+            padding: 0.65rem 6%;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 3px solid #d97706;
+            z-index: 1001;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(30, 58, 95, 0.2);
+        }
+
+        .top-bar-info {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            flex-wrap: wrap;
+        }
+
+        .top-bar i {
+            color: #fbbf24;
+            margin-right: 0.4rem;
+        }
+
+        .top-bar-badge {
+            background: rgba(251, 191, 36, 0.25);
+            color: #ffffff;
+            border: 1px solid rgba(251, 191, 36, 0.5);
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Header & Navbar */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 5%;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 96px;
+            width: auto;
+            object-fit: contain;
+            transition: var(--transition-smooth);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.06);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: var(--font-brand);
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .brand-tag {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #d97706;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        .brand-subtag {
+            font-size: 0.88rem;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-top: 3px;
+            -webkit-text-stroke: 0.5px #0f172a;
+            text-shadow: 0.3px 0.3px 0px #0f172a;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            color: #334155;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: var(--transition-smooth);
+            text-align: center;
+            line-height: 1.25;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+            color: #0f172a;
+            background: #f1f5f9;
+        }
+
+        .nav-links li a.active {
+            color: #0f172a;
+            background: #f1f5f9;
+            font-weight: 700;
+            box-shadow: inset 0 -3px 0 #d97706;
+        }
+
+        /* Dropdown Navigation */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            gap: 0.4rem !important;
+        }
+
+        .dropdown-toggle i {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+            color: #d97706;
+        }
+
+        .dropdown:hover .dropdown-toggle i {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.14);
+            padding: 0.6rem;
+            list-style: none;
+            min-width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1010;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown.open .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+            margin-bottom: 0.2rem;
+        }
+
+        .dropdown-menu li:last-child {
+            margin-bottom: 0;
+        }
+
+        .dropdown-menu li a {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            gap: 0.8rem;
+            width: 100%;
+            padding: 0.75rem 1rem !important;
+            border-radius: 10px;
+            color: #334155 !important;
+            font-size: 0.88rem !important;
+            font-weight: 600 !important;
+            text-align: left !important;
+            transition: var(--transition-smooth);
+        }
+
+        .dropdown-menu li a i {
+            color: #d97706;
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .dropdown-menu li a:hover {
+            background: #f1f5f9;
+            color: #0f172a !important;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            border: none;
+            background: #f1f5f9;
+            color: #0f172a;
+            font-size: 1.3rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+        }
+        .hamburger:hover {
+            background: #0f172a;
+            color: #ffffff;
+        }
+
+        /* Mobile Nav */
+        @media (max-width: 992px) {
+            .hamburger { display: flex; align-items: center; justify-content: center; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 82%;
+                max-width: 380px;
+                height: 100vh;
+                background: #ffffff;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition-smooth);
+                box-shadow: -10px 0 60px rgba(15, 23, 42, 0.2);
+                z-index: 1002;
+                gap: 0.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .close-menu {
+                position: absolute;
+                top: 2rem; right: 2rem;
+                font-size: 1.8rem; color: #0f172a;
+                cursor: pointer; width: 44px; height: 44px;
+                display: flex; align-items: center; justify-content: center;
+                border-radius: 12px; background: #f1f5f9;
+            }
+        }
+        @media (min-width: 993px) { .close-menu { display: none; } }
+
+        /* SPA Sections */
+        .spa-section {
+            display: none;
+            opacity: 1;
+            padding: 3rem 5%;
+            min-height: calc(100vh - 200px);
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .spa-section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Hero Banner - 100% Full Width */
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%) !important;
+            position: relative;
+            padding: 5.5rem 5%;
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            margin-top: -3rem;
+            margin-bottom: 3.5rem;
+            border-radius: 0 !important;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.2);
+            text-align: center;
+            border: none !important;
+            border-bottom: 4px solid #d97706 !important;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(217, 119, 6, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            color: #fbbf24 !important;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.25;
+            color: #ffffff !important;
+            margin-bottom: 1.4rem;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: var(--font-heading);
+            font-weight: 800;
+        }
+
+        .hero h1 span.gold-highlight {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: #cbd5e1 !important;
+            max-width: 750px;
+            margin: 0 auto 2rem;
+            line-height: 1.75;
+            font-weight: 500;
+        }
+
+        .hero-pills {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-pill {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        .hero-pill i { color: #fbbf24; margin-right: 6px; }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+            box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.5);
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(217, 119, 6, 0.6);
+            color: #ffffff !important;
+        }
+
+        .btn-outline-hero {
+            background: rgba(255, 255, 255, 0.12);
+            border: 2px solid #ffffff;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+        .btn-outline-hero:hover {
+            background: #ffffff;
+            color: #0f172a !important;
+            border-color: #ffffff;
+        }
+
+        .hero-pills {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-pill {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            color: #0f172a !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+        }
+        .hero-pill i { color: #d97706; margin-right: 6px; }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2.4rem;
+            background: var(--navy-gradient);
+            color: #ffffff !important;
+            font-weight: 700;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.88rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            color: #ffffff !important;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+            color: #ffffff !important;
+            font-weight: 700;
+            box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.4);
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(217, 119, 6, 0.5);
+            color: #ffffff !important;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #0f172a;
+            color: #0f172a !important;
+            font-weight: 700;
+        }
+        .btn-outline:hover {
+            background: #0f172a;
+            color: #ffffff !important;
+        }
+
+        .btn-outline-hero {
+            background: #ffffff;
+            border: 2px solid #0f172a;
+            color: #0f172a !important;
+            font-weight: 700;
+        }
+        .btn-outline-hero:hover {
+            background: #0f172a;
+            color: #ffffff !important;
+            border-color: #0f172a;
+        }
+
+        /* Glass / Elevated Card */
+        .glass-card {
+            background: var(--bg-surface);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        .glass-card:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(217, 119, 6, 0.3);
+        }
+
+        /* Service Cards */
+        .service-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        .service-icon-wrapper {
+            width: 72px;
+            height: 72px;
+            background: var(--navy-gradient);
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+            transition: var(--transition-smooth);
+        }
+        .service-icon-wrapper i {
+            font-size: 2rem;
+            color: #fbbf24;
+            margin: 0 !important;
+            background: none !important;
+            -webkit-text-fill-color: initial !important;
+        }
+        .service-card:hover .service-icon-wrapper {
+            transform: scale(1.1) rotate(-5deg);
+            border-color: #d97706;
+        }
+        .service-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        /* Accordion (FAQ) */
+        .accordion-item {
+            margin-bottom: 0.8rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+        .accordion-item:hover {
+            border-color: #cbd5e1;
+            box-shadow: var(--shadow-sm);
+        }
+        .accordion-header {
+            width: 100%;
+            padding: 1.3rem 1.5rem;
+            background: #f8fafc;
+            border: none;
+            color: #0f172a;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+        .accordion-header:hover {
+            background: #f1f5f9;
+            color: #d97706;
+        }
+        .accordion-header i { color: #d97706; transition: transform 0.3s ease; }
+        .accordion-content {
+            padding: 0 1.5rem; max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease-out; background: #ffffff;
+        }
+        .accordion-content-inner { padding: 1.5rem 0; color: #334155; }
+        .accordion-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .accordion-content li { margin-bottom: 0.5rem; }
+
+        /* Testimonials Styling */
+        .sub-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            color: #1e3a5f;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+        }
+
+        .testimonial-card {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+            border: 1px solid #e2e8f0 !important;
+            border-top: 4px solid #d97706 !important;
+            border-radius: 20px !important;
+            padding: 2rem !important;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12) !important;
+            border-color: #cbd5e1 !important;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .client-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(30, 58, 95, 0.25);
+            flex-shrink: 0;
+        }
+
+        .client-info {
+            flex-grow: 1;
+        }
+
+        .client-info h4 {
+            font-size: 1.05rem;
+            color: #0f172a;
+            font-weight: 700;
+            margin: 0 0 0.2rem 0;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .review-date {
+            color: #64748b;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .quote-bg-icon {
+            font-size: 1.8rem;
+            color: rgba(217, 119, 6, 0.2);
+        }
+
+        .testimonial-text {
+            color: #334155;
+            font-size: 0.95rem;
+            line-height: 1.65;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .mt-3 {
+            margin-top: 3.5rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: #ffffff !important;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.12) rotate(6deg);
+            box-shadow: 0 14px 35px rgba(37, 211, 102, 0.65);
+            color: #ffffff !important;
+        }
+
+        .whatsapp-float .tooltip-text {
+            position: absolute;
+            right: 74px;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 7px 16px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateX(10px);
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.2);
+        }
+
+        .whatsapp-float:hover .tooltip-text {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Pricing Card */
+        .pricing-card {
+            border: none;
+            position: relative;
+            overflow: hidden;
+            max-width: 520px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px !important;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid #e2e8f0 !important;
+        }
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 6px;
+            background: var(--gold-gradient);
+        }
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 1rem 0;
+            font-family: var(--font-heading);
+        }
+
+        /* Sidebar Layout */
+        .sidebar-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+        }
+        @media (max-width: 992px) { .sidebar-layout { grid-template-columns: 1fr; } }
+
+        /* Multi-column list */
+        .multi-col-list {
+            column-count: 2;
+            column-gap: 2rem;
+            list-style: none;
+            padding-left: 0;
+        }
+        @media (max-width: 768px) { .multi-col-list { column-count: 1; } }
+        .multi-col-list li {
+            margin-bottom: 0.6rem;
+            break-inside: avoid;
+            padding: 0.5rem 0.8rem;
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .multi-col-list li::before {
+            content: '›';
+            position: absolute;
+            left: 0.4rem;
+            color: #d97706;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        /* Forms & Input Controls */
+        .form-group {
+            margin-bottom: 1.2rem;
+            width: 100%;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.95rem 1.25rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: #0f172a;
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 12px;
+            transition: all 0.25s ease;
+            box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.03);
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .form-control::placeholder {
+            color: #94a3b8;
+            font-weight: 400;
+        }
+
+        .form-control:focus {
+            background: #ffffff;
+            border-color: #d97706;
+            box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.15), 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+            line-height: 1.6;
+        }
+
+        /* Validation Error Styling */
+        .form-control.is-invalid {
+            border-color: #ef4444 !important;
+            background-color: #fef2f2 !important;
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15), 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .error-msg {
+            color: #ef4444;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-top: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .error-msg::before {
+            content: '\f06a';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 0.78rem;
+        }
+
+        .sticky-form {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-top: 4px solid #d97706 !important;
+            border-radius: 20px !important;
+            padding: 2rem !important;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
+        }
+
+        .sticky-form h3 {
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 1.4rem;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+            color: #ffffff !important;
+            font-weight: 700;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(217, 119, 6, 0.35);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            padding: 5rem 5% 1.5rem;
+            color: #ffffff;
+            position: relative;
+        }
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+            background: var(--gold-gradient);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3.5rem;
+        }
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #fbbf24;
+            font-family: var(--font-heading);
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a { color: #cbd5e1; transition: var(--transition-smooth); text-decoration: none; }
+        .footer-links a:hover { color: #fbbf24; padding-left: 8px; }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Service Subnav Bar */
+        .service-subnav-bar {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            padding: 0.4rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .service-subnav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 0.5rem;
+            min-width: 650px;
+        }
+        .service-subnav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0.85rem 1.2rem;
+            color: #334155;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.92rem;
+            line-height: 1.3;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+            position: relative;
+            text-decoration: none;
+            flex: 1;
+        }
+        .service-subnav-item:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+        .service-subnav-item.active {
+            color: #0f172a;
+            font-weight: 700;
+            background: #f8fafc;
+            box-shadow: inset 0 -3px 0 #d97706;
+        }
+
+        /* Map Container */
+        .map-container {
+            width: 100%; height: 250px;
+            border-radius: 16px; overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            scroll-margin-top: 120px;
+            padding-top: 1rem;
+        }
+        .section-header h2 {
+            font-size: 2.6rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 18px;
+            color: #0f172a;
+        }
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 70px; height: 4px;
+            background: var(--gold-gradient);
+            border-radius: 2px;
+        }
+
+        .content-block { margin-bottom: 2rem; }
+        .content-block p { margin-bottom: 1rem; color: #334155; }
+        ul.bullet-list { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        ul.bullet-list li { margin-bottom: 0.5rem; color: #334155; }
+
+        /* Animations */
+        .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.revealed { opacity: 1; transform: translateY(0); }
+        .stagger-children > * { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+        .stagger-children.revealed > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+        .stagger-children.revealed > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .spa-section { padding: 2rem 4%; }
+        }
+
+        .mb-2 { margin-bottom: 2rem; }
+        .mt-2 { margin-top: 2rem; }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span><i class="fas fa-location-dot"></i> Visit us at : 900 Guelph Street, Suite #217, Kitchener, ON N2H 5Z6</span>
+            <span><i class="fas fa-clock"></i> Open Mon–Fri: 10:00 AM – 7:30 PM | Sat: By Appt</span>
+        </div>
+        <div class="top-bar-info">
+            <span><i class="fas fa-envelope"></i> <a href="mailto:kitchenernotary@hotmail.com" style="color:#ffffff; text-decoration:none;">kitchenernotary@hotmail.com</a></span>
+            <span><i class="fab fa-whatsapp" style="color: #25d366; font-size: 1rem;"></i> <a href="https://wa.me/19052261009" target="_blank" rel="noopener noreferrer" style="color:#ffffff; text-decoration:none; font-weight: 700;">WhatsApp: +1 905 226 1009</a></span>
+            <span class="top-bar-badge"><i class="fas fa-shield-halved"></i> Licensed LSO Lawyers</span>
+            <span><i class="fas fa-phone"></i> Call <a href="tel:+12892727941" style="color: #ffffff; font-weight: 700; text-decoration: underline;">+1 289 272 7941</a> or <a href="tel:+12266675705" style="color: #ffffff; font-weight: 700; text-decoration: underline;">226 667 5705</a></span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="Kitchener Notary Public &amp; Commissioner for Oaths" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">KITCHENER NOTARY</span>
+                    <span class="brand-tag">PUBLIC &amp; COMMISSIONER FOR OATHS</span>
+                    <span class="brand-subtag">WALK-IN / NO APPOINTMENT NEEDED</span>
+                </div>
+            </a>
+            <button class="hamburger"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links">
+                <i class="fas fa-times close-menu"></i>
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="nav-item dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#notarization" class="nav-item"><i class="fas fa-stamp"></i> Notarization &amp; Commissioning</a></li>
+                        <li><a href="#realestate" class="nav-item"><i class="fas fa-house-chimney"></i> Real Estate Transaction</a></li>
+                        <li><a href="#wills" class="nav-item"><i class="fas fa-file-signature"></i> Wills &amp; Power of Attorney</a></li>
+                        <li><a href="#ila" class="nav-item"><i class="fas fa-scale-balanced"></i> ILA &amp; Opinion Letter</a></li>
+                        <li><a href="#drafting" class="nav-item"><i class="fas fa-file-contract"></i> Drafting &amp; Vetting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#fees" class="nav-item">Fees</a></li>
+                <li><a href="#faq" class="nav-item">FAQ</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        
+        <!-- SECTION 1: HOME -->
+        <section id="home" class="spa-section active">
+            <div class="hero glass-card mb-2">
+                <div class="hero-badge"><i class="fas fa-award"></i> LICENSED ONTARIO LAWYERS &amp; NOTARIES</div>
+                <h1>Notarizations, Certifications, Legalizations &amp; <span class="gold-highlight">Commissioning</span></h1>
+                <p class="hero-desc">Fast, affordable &amp; official notary public services provided by experienced, qualified lawyers licensed by the Law Society of Ontario.</p>
+                <div class="hero-pills">
+                    <span class="hero-pill"><i class="fas fa-check-circle"></i> Walk-Ins Welcome</span>
+                    <span class="hero-pill"><i class="fas fa-check-circle"></i> Official Seals</span>
+                    <span class="hero-pill"><i class="fas fa-check-circle"></i> Same-Day Service</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-gold">Know More About Us</a>
+                    <a href="#fees" class="btn btn-outline-hero">View Fees &amp; Pricing</a>
+                </div>
+            </div>
+
+            <div class="glass-card mb-2 reveal">
+                <div class="grid-2" style="align-items: center;">
+                    <div>
+                        <h2>KITCHENER Notary Public &amp; Commissioner</h2>
+                        <p>We offer a full range of Notary Public services, this includes Commissioner of Oaths, Certified copies, Affidavits, Forms and applications (Passport, employment, etc.), in any language, quickly and affordably,you can Walk- in without an appointment at our only location in Kitchener, ON, Canada.Click for directions In our all-notary public and commissioner of oaths services are provided by a lawyer, who are licensed by the Law Society of Ontario and our seals and signatures are registered with Official Documents Services Canada. This means that our notarizations are eligible for the Legalization and Authentication or Apostil Process needed to hold up in Ontario and outside of Canada.</p>
+                        <br>
+                        <a href="#about" class="btn btn-outline">Know More About us</a>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?auto=format&fit=crop&q=80" alt="Lawyer Office" style="width: 100%; border-radius: 16px; box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header mt-2 reveal">
+                <h2>Our Services</h2>
+            </div>
+            <div class="grid-3 mb-2 stagger-children">
+                <div class="glass-card service-card">
+                    <div class="service-icon-wrapper"><i class="fas fa-stamp"></i></div>
+                    <h3>NOTARIZATION AND COMMISSIONING SERVICES</h3>
+                    <a href="#notarization" class="btn btn-outline">Know More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-icon-wrapper"><i class="fas fa-file-signature"></i></div>
+                    <h3>Will and POA Drafting</h3>
+                    <a href="#wills" class="btn btn-outline">Know More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-icon-wrapper"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>ILA &amp; Opinion Letters</h3>
+                    <a href="#ila" class="btn btn-outline">Know More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-icon-wrapper"><i class="fas fa-house-chimney"></i></div>
+                    <h3>Real Estate Transactions</h3>
+                    <a href="#realestate" class="btn btn-outline">Know More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="service-icon-wrapper"><i class="fas fa-file-contract"></i></div>
+                    <h3>Drafting and vetting of Contracts and Agreements</h3>
+                    <a href="#drafting" class="btn btn-outline">Know More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="glass-card mb-2 reveal">
+                <div class="grid-2">
+                    <div>
+                        <h2>Contact us Today</h2>
+                        <p>Consultations are by appointment only. Please contact us to book a first time "Free Consultation". We look forward to assisting you. If you have any questions or concerns, kindly call or fill out the form below and we will reach out within 24 hours (most likely sooner).</p>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="grid-2">
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"></div>
+                                <div class="form-group"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+                            </div>
+                            <div class="grid-2">
+                                <div class="form-group"><input type="email" class="form-control" placeholder="Email Address"></div>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                            </div>
+                            <div class="form-group"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+                            <button type="button" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Your Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header mt-3 reveal">
+                <span class="sub-badge"><i class="fab fa-google" style="color: #4285f4;"></i> VERIFIED GOOGLE REVIEWS</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="grid-2 mb-2 stagger-children">
+                <div class="glass-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">AC</div>
+                        <div class="client-info">
+                            <h4>Akansha Chouhan</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="review-date">Verified Google Review</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right quote-bg-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"Very Polite and Friendly Person ... so Inexpensive services too ... No wonder he is having all this good reviews ..... No appointment needed for sure .. But I would suggest to atleast Call first to ask for instant availability ... Overall great experience .. thumbs up from my side 👍👍👍"</p>
+                </div>
+
+                <div class="glass-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">R</div>
+                        <div class="client-info">
+                            <h4>Rabs</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="review-date">Verified Google Review</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right quote-bg-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent service, the best price in KW, very kind and professional, would recommend to anyone!! Come here for your legal needs!"</p>
+                </div>
+
+                <div class="glass-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">KD</div>
+                        <div class="client-info">
+                            <h4>Ky Dominique Nguyen Nhat</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="review-date">Verified Google Review</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right quote-bg-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"He is really kind and honest person, helpful for communicative. Thanks"</p>
+                </div>
+
+                <div class="glass-card testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">R</div>
+                        <div class="client-info">
+                            <h4>Rachna</h4>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="review-date">Verified Google Review</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-quote-right quote-bg-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"Had a great experience here. I came in to notarize my documents &amp; other paperwork and the Lawyer was very kind and helpful :)"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT -->
+        <section id="about" class="spa-section">
+            <div class="section-header reveal">
+                <h2>ABOUT US</h2>
+            </div>
+            <div class="glass-card reveal">
+                <div class="content-block">
+                    <p>We offer a full range of Notary Public services, this includes Commissioner of Oaths, Certified copies, Affidavits, Forms and applications (Passport, employment, etc.), in any language, quickly and affordably,you can Walk- in without an appointment at our only location in Kitchener, ON, Canada. Click for directions</p>
+                    <p>In our all-notary public and commissioner of oaths services are provided by a lawyer, who are licensed by the Law Society of Ontario and our seals and signatures are registered with Official Documents Services Canada. This means that our notarizations are eligible for the Legalization and Authentication or Apostil Process needed to hold up in Ontario and outside of Canada.</p>
+                </div>
+                
+                <div class="content-block mt-2">
+                    <h3>International Notary Services:</h3>
+                    <p>We notarize documents for use in other countries on regular basis. When documents are for use outside of Canada, please ensure to check with the consulate or embassy of the country you are dealing with to determine the requirements of that country.</p>
+                </div>
+                
+                <div class="content-block mt-2">
+                    <h3>U.S.A Notarizations:</h3>
+                    <p>We notarize all kinds of U.S documents on regular basis, particularly Real Estate Closing documents for purchase, sale and mortgage, time share documents. Please ensure to provide our information to your title company or your attorney prior to booking an appointment to ensure that they will accept our notarization.</p>
+                </div>
+                
+                <div class="content-block mt-2">
+                    <h3>Lawyer:</h3>
+                    <p>We can also help you in Last Will, Living Will, Power of Attorney, Opinion Letters, ILA, Family/Domestic Agreements Real Estate Closings etc. for more detail you can contact our office.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CONTACT -->
+        <section id="contact" class="spa-section">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="grid-4 mb-2">
+                <div class="glass-card text-center" style="text-align: center;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--gold-main); margin-bottom: 1rem;"></i>
+                    <h3>Address</h3>
+                    <p>900 Guelph Street, Suit # 217,<br>Kitchener, ON N2H 5Z6</p>
+                </div>
+                <div class="glass-card text-center" style="text-align: center;">
+                    <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--gold-main); margin-bottom: 1rem;"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:kitchenernotary@hotmail.com" style="color: #d97706; font-weight: 600; text-decoration: none;">kitchenernotary@hotmail.com</a></p>
+                </div>
+                <div class="glass-card text-center" style="text-align: center;">
+                    <i class="fas fa-phone" style="font-size: 2.5rem; color: var(--gold-main); margin-bottom: 1rem;"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+12892727941" style="color: #0f172a; font-weight: 700; text-decoration: none;">+1 (289) 272-7941</a><br><a href="tel:+12266675705" style="color: #0f172a; font-weight: 700; text-decoration: none;">+1 (226) 667-5705</a></p>
+                </div>
+                <div class="glass-card text-center" style="text-align: center;">
+                    <i class="fab fa-whatsapp" style="font-size: 2.5rem; color: #25d366; margin-bottom: 1rem;"></i>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/19052261009" target="_blank" rel="noopener noreferrer" style="color: #25d366; font-weight: 700; text-decoration: none;">+1 (905) 226-1009</a></p>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="section-header" style="margin-bottom: 2rem;">
+                    <h2>Need Legal Help? Talk To Our Lawyer</h2>
+                </div>
+                <p style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Consultations are by appointment only. Please contact us to book a first time "Free Consultation". We look forward to assisting you. If you have any questions or concerns, kindly call or fill out the form below and we will reach out within 24 hours (most likely sooner).</p>
+                
+                <form>
+                    <div class="grid-2">
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"></div>
+                        <div class="form-group"><input type="email" class="form-control" placeholder="Email Address"></div>
+                    </div>
+                    <div class="grid-2">
+                        <div class="form-group"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+                        <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                    </div>
+                    <div class="form-group"><textarea class="form-control" rows="5" placeholder="Your message"></textarea></div>
+                    <div style="text-align: center;"><button type="button" class="btn-submit" style="max-width: 300px;"><i class="fas fa-paper-plane"></i> Send Message</button></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECTION 4: DRAFTING -->
+        <section id="drafting" class="spa-section">
+            <div class="service-subnav-bar">
+                <div class="service-subnav-container">
+                    <a href="#notarization" class="service-subnav-item">
+                        <span>Notarization &amp;</span>
+                        <span>Commissioning</span>
+                    </a>
+                    <a href="#realestate" class="service-subnav-item">
+                        <span>Real Estate</span>
+                        <span>Transaction</span>
+                    </a>
+                    <a href="#wills" class="service-subnav-item">
+                        <span>Wills &amp; Power of</span>
+                        <span>Attorney</span>
+                    </a>
+                    <a href="#ila" class="service-subnav-item">
+                        <span>ILA &amp; Opinion</span>
+                        <span>Letter</span>
+                    </a>
+                    <a href="#drafting" class="service-subnav-item">
+                        <span>Drafting &amp;</span>
+                        <span>Vetting</span>
+                    </a>
+                    <a href="#fees" class="service-subnav-item">
+                        <span>Fees &amp;</span>
+                        <span>Pricing</span>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-layout">
+                <div class="main-col">
+                    <div class="glass-card">
+                        <h2>Drafting and Vetting of Agreements</h2>
+                        <p class="mb-2">In the present era of rapid commercialization, contracts and agreements form a critical aspect of every business, family or Real Estate. Organizations and business firms need to enter into perfect and detailed contracts for minimizing the legal and business risks, which may arise in the future. Our Lawyers are well aware of such issues and therefore put in all of their experience, time, and resources in the drafting stage of contracts and agreements for protecting the business interests of the clients.</p>
+                        
+                        <h3>Our Services Include:</h3>
+                        <ul class="bullet-list mb-2">
+                            <li>Drafting various kinds of business/ family/ Real Estate agreements for the clients</li>
+                            <li>Vetting of agreement & advising appropriate changes</li>
+                            <li>Providing interpretation advice on various agreements</li>
+                            <li>Agreement management, negotiations, & renewal</li>
+                        </ul>
+                        
+                        <a href="#contact" class="btn">Book your Consultation</a>
+                    </div>
+                </div>
+                <div class="side-col">
+                    <div class="glass-card sticky-form" style="position: sticky; top: 100px;">
+                        <h3>GET A QUOTE TODAY</h3>
+                        <form>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"></div>
+                            <div class="form-group"><input type="email" class="form-control" placeholder="Email Address"></div>
+                            <div class="form-group"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                            <div class="form-group"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+                            <button type="button" class="btn-submit"><i class="fas fa-paper-plane"></i> Submit Quote Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FAQ -->
+        <section id="faq" class="spa-section">
+            <div class="section-header">
+                <h2>ANSWER TO COMMON QUESTIONS</h2>
+            </div>
+            
+            <div class="glass-card mb-2">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">GENERAL INSTRUCTIONS <i class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <ul class="bullet-list">
+                                    <li>We accept cash/debit/credit or company cheque payment.</li>
+                                    <li>Bring ONE government issued photo identification (examples: passport, citizenship card, permanent resident card, driver's licence, OHIP) or TWO government issued non-photo identification (examples: SIN card, birth certificate).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">FOR CERTIFIYING / NOTARIZING TRUE COPIES: <i class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <ul class="bullet-list">
+                                    <li>We also have photo copies (colour/black white) facility at our office.</li>
+                                    <li>Bring the photocopy and the original document - the Notary must view the original, and there is no photocopier at our office.</li>
+                                    <li>If you are photocopying multiple documents onto a single page, by law, each photocopied image requires its own seal. A fee for each seal is required.</li>
+                                    <li>A multi-page document requires only 1 seal. The Notary will seal 1st page and signature stamp other pages.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">FOR SIGNING DOCUMENTS: <i class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <ul class="bullet-list">
+                                    <li>MARK AN 'X' at each place the Notary is to sign (to save us both time).</li>
+                                    <li>Complete all your documents: fill in forms, enter ID numbers, attach photographs, if required, etc.,</li>
+                                    <li>Don't sign or date the documents before seeing the Notary. It is the Notary's job to properly identify you and witness you signing</li>
+                                    <li>The name on the Gov't issued photo ID you bring, must match the name you are using on your document; especially important where you have 2 last names.</li>
+                                    <li>Notary fees are charged per Notary signature and seal, not per document.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">About Seal: <i class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <ul class="bullet-list">
+                                    <li>In Ontario, Notaries use a seal that makes a raised impression called an embossed seal.</li>
+                                    <li>If you need to scan or photocopy the embossed seal we have applied to your document, first lightly shade over the raised parts of the seal with a pencil so it will become visible in the scan or photocopy. You can erase the shading afterward.</li>
+                                    <li>If you want us to add a seal sticker, a gold seal usually copies better than a red seal.</li>
+                                    <li>An embossed seal is the only seal legally sanctioned for notarizing in Ontario. It is accepted as such everywhere Canadian notarizations are legally recognized. However, if you want to make your document look more classy by adding a red or gold seal sticker, we can supply those for no additional charge.</li>
+                                    <li>Unless your institution requires otherwise, a multi-page notarized/certified copy only requires one seal. The Notary will indicate the number of pages in the document near his signature, and will signature stamp each page</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">About Authentication / Apostille?: <i class="fas fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <ul class="bullet-list">
+                                    <li>In Canada the equivalent of an Apostille Service is a 3-step process:<br>
+                                    1. Notarization - by a Notary Public. This is the only part that we do.<br>
+                                    2. Authentication - either in Ottawa or at Toronto's Official Document Services (416-325-8416)<br>
+                                    3. Legalization - by a foreign Embassy or Consulate.</li>
+                                    <li>Only a foreign Embassy or Consulate can explain which documents you need to have Norarized, and where you need to go for #2.</li>
+                                    <li>Ask them what they require: Notarized signature / Affidavit, Certified true Copies, Cerified Originals, Translations, etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card">
+                <div class="content-block">
+                    <p>A Commissioner of Oaths (aka "Commissioner for taking Affidavits") is an official who administers oaths or affirmations on documents. An oath or affirmation may be required on affidavits, statutory declarations, or government forms.</p>
+                    <p>A Notary Public is like a Commissioner of Oaths. But in addition to being able to administer oaths, take affidavits and declarations, a Notary Public can also attest or certify documents. At our we notarize officially signed, stamp or seal documents in minutes, online, or in person: Our virtual, online notaries service with long opening hours throughout the week and on weekends, we're always able to help, even when the matter is urgent.</p>
+                    <p>International Notary Services: We notarize documents for use in other countries on regular basis. When documents are for use outside of Canada, please ensure to check with the consulate or embassy of the country you are dealing with to determine the requirements of that country.</p>
+                    <p>U.S.A Notarizations: We notarize all kinds of U.S documents on regular basis, particularly Real Estate Closing documents for purchase, sale and mortgage, time share documents. Please ensure to provide our information to your title company or your attorney prior to booking an appointment to ensure that they will accept our notarization.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FEES -->
+        <section id="fees" class="spa-section">
+            <div class="service-subnav-bar">
+                <div class="service-subnav-container">
+                    <a href="#notarization" class="service-subnav-item">
+                        <span>Notarization &amp;</span>
+                        <span>Commissioning</span>
+                    </a>
+                    <a href="#realestate" class="service-subnav-item">
+                        <span>Real Estate</span>
+                        <span>Transaction</span>
+                    </a>
+                    <a href="#wills" class="service-subnav-item">
+                        <span>Wills &amp; Power of</span>
+                        <span>Attorney</span>
+                    </a>
+                    <a href="#ila" class="service-subnav-item">
+                        <span>ILA &amp; Opinion</span>
+                        <span>Letter</span>
+                    </a>
+                    <a href="#drafting" class="service-subnav-item">
+                        <span>Drafting &amp;</span>
+                        <span>Vetting</span>
+                    </a>
+                    <a href="#fees" class="service-subnav-item">
+                        <span>Fees &amp;</span>
+                        <span>Pricing</span>
+                    </a>
+                </div>
+            </div>
+            <div class="section-header">
+                <h2>Fees</h2>
+            </div>
+            
+            <div class="glass-card mb-2" style="text-align: center;">
+                <p style="font-weight: 600; color: var(--gold-light);">Note: We accept all major forms of payment, including Debit Interac, Visa, Mastercard, American Express, Apple Pay, and more</p>
+                <p class="mt-2" style="max-width: 800px; margin-left: auto; margin-right: auto;">We do not charge based on number of pages, documents, or the number of people signing.Instead, we bill based on the number of times we notarize documents and apply seals. It is up to you and the document's recipient to determine how many times we must sign, not us.</p>
+            </div>
+            
+            <div class="glass-card pricing-card text-center" style="text-align: center;">
+                <h3>IN-PERSON OR ONLINE NOTARY PUBLIC</h3>
+                <div class="price-tag">$30</div>
+                <p style="margin-bottom: 2rem; color: var(--text-offwhite);">Notarizations/Certifications/Legalizations/ Commissioning of documents</p>
+                
+                <ul class="bullet-list" style="text-align: left; margin-bottom: 2rem; display: inline-block;">
+                    <li>First notary signature and seal $30</li>
+                    <li>Additional notary signature and seal: $25 each</li>
+                    <li>Bulk signature and seal (over 5th signature and up): 50% discount</li>
+                </ul>
+                <br>
+                <a href="#contact" class="btn">GET A QUOTE TODAY</a>
+            </div>
+        </section>
+
+        <!-- SECTION 7: NOTARIZATION -->
+        <section id="notarization" class="spa-section">
+            <div class="service-subnav-bar">
+                <div class="service-subnav-container">
+                    <a href="#notarization" class="service-subnav-item">
+                        <span>Notarization &amp;</span>
+                        <span>Commissioning</span>
+                    </a>
+                    <a href="#realestate" class="service-subnav-item">
+                        <span>Real Estate</span>
+                        <span>Transaction</span>
+                    </a>
+                    <a href="#wills" class="service-subnav-item">
+                        <span>Wills &amp; Power of</span>
+                        <span>Attorney</span>
+                    </a>
+                    <a href="#ila" class="service-subnav-item">
+                        <span>ILA &amp; Opinion</span>
+                        <span>Letter</span>
+                    </a>
+                    <a href="#drafting" class="service-subnav-item">
+                        <span>Drafting &amp;</span>
+                        <span>Vetting</span>
+                    </a>
+                    <a href="#fees" class="service-subnav-item">
+                        <span>Fees &amp;</span>
+                        <span>Pricing</span>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-layout">
+                <div class="main-col">
+                    <div class="glass-card">
+                        <h2>NOTARIZATION AND COMMISSIONING SERVICES</h2>
+                        <h4 style="color: var(--text-offwhite); font-family: var(--font-body); font-weight: normal; margin-bottom: 1.5rem;">We do Notarizations, Certifications, Legalizations, Commissioning the documents:</h4>
+                        
+                        <p class="mb-2">This is a short list of just some of the types of documents we can notarize and/or draft. It is not a complete list so if you don't see your document here or if you don't know what kind of document you have, just give us a call or send us an email. We'll be happy to help you figure it out!</p>
+                        
+                        <ul class="multi-col-list mb-2">
+                            <li>Affidavits by Commissioner of Oaths</li>
+                            <li>Applications for Permanent Resident Card</li>
+                            <li>Application to Change Adults Name Ontario</li>
+                            <li>Attestation of Documents</li>
+                            <li>Bank and Financial Documents</li>
+                            <li>Real Estate Purchase and Sale Documents</li>
+                            <li>Canadian Construction Documents Committee Forms</li>
+                            <li>CCDC 9A – 2018 Contractor Statutory Declarations</li>
+                            <li>CCDC 9B – 2018 Subcontractor Statutory Declarations</li>
+                            <li>Certified Document True Copies</li>
+                            <li>College Certificates and Diplomas</li>
+                            <li>Company Registrant Identification Number (RIN)</li>
+                            <li>Contractor Forms and Declarations</li>
+                            <li>Child Travel Consent Forms Notarization</li>
+                            <li>Consent to Travel Letters for Children</li>
+                            <li>Custodianship Declarations</li>
+                            <li>Declarations of Common-Law Union</li>
+                            <li>Declarations in lieu of Guarantor PPTC 132</li>
+                            <li>Electronic Documents Notarization</li>
+                            <li>FRO – Family Responsibility Office Forms</li>
+                            <li>Family Gift of a Used Vehicle Form</li>
+                            <li>U.S.A Real Estate Sale and Purchase Documents</li>
+                            <li>Foreign Divorce Opinion Letters</li>
+                            <li>Foreign Language Documents</li>
+                            <li>Immunization forms • Insurance forms</li>
+                            <li>International Notary Public Services</li>
+                            <li>Motor Vehicle Registration for Corporations</li>
+                            <li>Motor Vehicle Within Family Transfer Form</li>
+                            <li>Single Status Declaration Notarization</li>
+                            <li>Statutory Declaration for Name Change Forms</li>
+                            <li>Notarial Certificates • Notarization of Electronic Documents</li>
+                            <li>Notary Services for Bank Documents</li>
+                            <li>Notarized Letters of Invitation for Visitor Visa</li>
+                            <li>Notarized Travel Consent Letters</li>
+                            <li>One and the Same Person Affidavits • OSAP Affidavits • OSAP Forms and Declarations</li>
+                            <li>Out of Province Real Estate Documents</li>
+                            <li>Power of Attorney</li>
+                            <li>Proof of Loss Insurance Forms and Declarations</li>
+                            <li>Proof of Residence Forms • Purchase or Sale of Real Estate Documents</li>
+                            <li>Single Status Declarations</li>
+                            <li>Statement of Conscience or Religious Belief Affidavit Forms</li>
+                            <li>Statutory Declarations</li>
+                            <li>Statement of Conscience or Religious Belief Form</li>
+                            <li>Sworn Statement for a Family Gift of a Used Vehicle in Ontario</li>
+                            <li>Transfer of Ownership of a Used Vehicle Forms</li>
+                            <li>University Degrees and Diplomas</li>
+                            <li>USA Real Estate Documents</li>
+                            <li>Vehicle Transfer Forms and Declarations</li>
+                            <li>Witnessing a Signature & Much more! Call or visit our office</li>
+                            <li>Letters of Invitation Drafting and Notarization</li>
+                            <li>Life Certificate for all Countries</li>
+                            <li>Mortgage Documents</li>
+                        </ul>
+                        
+                        <h3 class="mt-2">Specialized Legal Services:</h3>
+                        <ul class="bullet-list mb-2">
+                            <li>Foreign Divorce Opinion Letter / ILA</li>
+                            <li>Drafting of your personal Living Will, Last Will & Continuing Power of attorney</li>
+                            <li>Drafting and Vetting of Agreements</li>
+                            <li>Real Estate Transactions and Transfers</li>
+                        </ul>
+                        
+                        <a href="#contact" class="btn">Book your Consultation</a>
+                    </div>
+                </div>
+                <div class="side-col">
+                    <div class="glass-card sticky-form" style="position: sticky; top: 100px;">
+                        <h3>GET A QUOTE TODAY</h3>
+                        <form>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"></div>
+                            <div class="form-group"><input type="email" class="form-control" placeholder="Email Address"></div>
+                            <div class="form-group"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                            <div class="form-group"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+                            <button type="button" class="btn" style="width:100%">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: REAL ESTATE -->
+        <section id="realestate" class="spa-section">
+            <div class="service-subnav-bar">
+                <div class="service-subnav-container">
+                    <a href="#notarization" class="service-subnav-item">
+                        <span>Notarization &amp;</span>
+                        <span>Commissioning</span>
+                    </a>
+                    <a href="#realestate" class="service-subnav-item">
+                        <span>Real Estate</span>
+                        <span>Transaction</span>
+                    </a>
+                    <a href="#wills" class="service-subnav-item">
+                        <span>Wills &amp; Power of</span>
+                        <span>Attorney</span>
+                    </a>
+                    <a href="#ila" class="service-subnav-item">
+                        <span>ILA &amp; Opinion</span>
+                        <span>Letter</span>
+                    </a>
+                    <a href="#drafting" class="service-subnav-item">
+                        <span>Drafting &amp;</span>
+                        <span>Vetting</span>
+                    </a>
+                    <a href="#fees" class="service-subnav-item">
+                        <span>Fees &amp;</span>
+                        <span>Pricing</span>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-layout">
+                <div class="main-col">
+                    <div class="glass-card">
+                        <h2>Real Estate Transactions</h2>
+                        <p class="mb-2">Whether you are purchasing, selling, refinancing, or need to perform a land title search, transfer a title, or apply for a right of survivorship, our team will simplify the process. We can help you close your real estate transaction on time. . VMOST Law's Real Estate Lawyers help you:</p>
+                        
+                        <div class="mb-2">
+                            <h3>Real Estate Transactions and Transfers:</h3>
+                            <ul class="bullet-list">
+                                <li>Real Estate Purchase Agreement</li>
+                                <li>Discharge of Mortgage</li>
+                                <li>Mortgage Agreement</li>
+                                <li>Offer to Purchase Real Estate</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3>Rental and Leasing:</h3>
+                            <ul class="bullet-list">
+                                <li>Apartment Lease (Residential Lease Agreement)</li>
+                                <li>Business Lease (Commercial Lease)</li>
+                                <li>Rent Receipt</li>
+                                <li>Bail commercial</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3>Prior to Renting:</h3>
+                            <ul class="bullet-list">
+                                <li>Letter of Intent</li>
+                                <li>Offer to Lease</li>
+                                <li>Residential Rental Application</li>
+                                <li>Rental Inspection Report</li>
+                                <li>Hold-Harmless (Indemnity) Agreement</li>
+                                <li>Roommate Agreement</li>
+                                <li>Convention de colocation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3>Lease Notices:</h3>
+                            <ul class="bullet-list">
+                                <li>Landlord: Notice of Lease Violation, Notice of Termination, Notice to Pay Rent or Quit, Eviction Notice, To Enter, Rent Increase Notice</li>
+                                <li>Tenant: Notice of Intent to Vacate Premises, Notice to Repair, Termination by Tenant</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3>Subleasing:</h3>
+                            <ul class="bullet-list">
+                                <li>Landlord's Consent to Sublease</li>
+                                <li>Commercial Sublease Agreement</li>
+                                <li>Residential Sublease Agreement</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3>Lease Amendment and Assignment:</h3>
+                            <ul class="bullet-list">
+                                <li>Landlord's Consent to Lease Assignment</li>
+                                <li>Lease Assignment Agreement</li>
+                                <li>Lease Addendum</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-2">
+                            <h3>Equipment and Property Rental:</h3>
+                            <ul class="bullet-list">
+                                <li>Equipment Rental Agreement</li>
+                                <li>Vehicle Leasing Agreement</li>
+                                <li>Personal Property Rental Agreement</li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#contact" class="btn mt-2">Book your Consultation</a>
+                    </div>
+                </div>
+                <div class="side-col">
+                    <div class="glass-card sticky-form" style="position: sticky; top: 100px;">
+                        <h3>GET A QUOTE TODAY</h3>
+                        <form>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"></div>
+                            <div class="form-group"><input type="email" class="form-control" placeholder="Email Address"></div>
+                            <div class="form-group"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                            <div class="form-group"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+                            <button type="button" class="btn" style="width:100%">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: WILLS -->
+        <section id="wills" class="spa-section">
+            <div class="service-subnav-bar">
+                <div class="service-subnav-container">
+                    <a href="#notarization" class="service-subnav-item">
+                        <span>Notarization &amp;</span>
+                        <span>Commissioning</span>
+                    </a>
+                    <a href="#realestate" class="service-subnav-item">
+                        <span>Real Estate</span>
+                        <span>Transaction</span>
+                    </a>
+                    <a href="#wills" class="service-subnav-item">
+                        <span>Wills &amp; Power of</span>
+                        <span>Attorney</span>
+                    </a>
+                    <a href="#ila" class="service-subnav-item">
+                        <span>ILA &amp; Opinion</span>
+                        <span>Letter</span>
+                    </a>
+                    <a href="#drafting" class="service-subnav-item">
+                        <span>Drafting &amp;</span>
+                        <span>Vetting</span>
+                    </a>
+                    <a href="#fees" class="service-subnav-item">
+                        <span>Fees &amp;</span>
+                        <span>Pricing</span>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-layout">
+                <div class="main-col">
+                    <div class="glass-card">
+                        <h2>WILLS & POWERS OF ATTORNEY</h2>
+                        
+                        <div class="content-block">
+                            <p>Please note that at Walk-In Notary we do not draft wills or powers of attorney. We only notarize them. For our notarization fees, please consult our fees page.</p>
+                            <p>We receive many questions about how to notarize wills and powers of attorney. This is an important topic to many people. And unfortunately, it is a bit complicated. Therefore, we dedicated an entire page of our website to explaining the notarization process, as it relates to wills and powers of attorney, as clearly and as simply as we can. This having been said, please note, that just as with all the other content on our website, none of what follows constitutes legal advice. The purpose of this page is to inform, not advise. Legal advice is sometimes required dealing with wills and powers of attorney, and if that is the case, we strongly urge you to contact a lawyer.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p>A will is a document whereby a person, referred to as a testator, expresses his/her wishes for how they want their property to be distributed after their death.</p>
+                            <p>When Walk-In Notary refers to wills and the methods of notarizing them, we are taking into account the legal customs and procedures of the province of Ontario. Will structures, witnessing and notarization requirements, legal consequences, etc. will vary from one place to another, even between provinces in the same country, and of course between country to country. As always, it is the client's responsibility to determine the correct manner of drafting, executing and notarizing a will. If the client is unsure, it is best to seek advice from a lawyer.</p>
+                            <p>The next sections discuss in detail how we approach wills.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <h3>Witnesses:</h3>
+                            <p>Wills in Ontario have to be witnessed by at least two witnesses. It is best to find someone that knows the testator but does not stand to gain anything from the will. For example, a friend, a neighbour, a co-worker.</p>
+                            <p>The following people cannot act as witnesses to the will:</p>
+                            <ul class="bullet-list">
+                                <li>Beneficiaries to the will or their spouses</li>
+                                <li>Executors to the will</li>
+                                <li>The Notary that will be commissioning the affidavits to the will</li>
+                                <li>Our reception staffs</li>
+                                <li>A person under 18 years of age</li>
+                                <li>A person whose property is under guardianship or has a guardian of the person</li>
+                                <li>A complete stranger that does not know the testator personally</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <h3>Affidavits of Execution:</h3>
+                            <p>It is highly recommended that wills contain affidavits of execution for each witness. In this context, an affidavit of execution is a statement from a witness, under oath, that they witnessed the testator sign the will. Affidavits of execution have to be commissioned by a notary public. This is what we do. Furthermore, the affidavit of execution should make reference to the Will as an exhibit to the affidavit of execution. That means the notary will need to stamp and sign the back of the will with an exhibit stamp.</p>
+                            <p>You can bring your own affidavits of execution for us to commission. Or we can draft them for you. We charge 69.99 to draft an affidavit of execution.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <h3>Timing of Witnessing and Notarization:</h3>
+                            <p>Given all of the above, you might wonder about the order in which all this must take place. Does everyone have to be in the same room at the same time? There are two ways to do this.</p>
+                            <ul class="bullet-list">
+                                <li>1. Everyone signs everything at the same time - That is, everyone (i.e. the testator, the witnesses, and the Notary) are in the same room at the same time. The testator would sign the will first. The witnesses would sign the will second. Then the witnesses would sign the affidavit of execution. Then the notary will commission the affidavit and stamp the will as an exhibit to those affidavits. This method is the quickest, most efficient, and most common.</li>
+                                <li>2. Presign the will but not the affidavits - Technically, the notary does not need to witness the testator sign the will. The notary only needs to witness the witnesses sign the affidavits of execution. That means that the will can be signed in advance, not in the notary's presence, and at some later point the witnesses can attend the notary's office with the affidavit of execution and the original will. There is no legal obstacle to doing this, however, note that there is a logistical obstacle. That is, in most cases it is the testator that pays the notary's fee, which means that the testator will need to attend the notary's office. Furthermore, the notary will need to stamp the back of the original will with an exhibit stamp, which means that the original will has to be brought to the notary's office. That's why we recommend method 1 over method 2.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <h3>Initials:</h3>
+                            <p>Often, in order to be valid, each page of a will has to be initialled by the testator and the witnesses. This can cause some confusion, however, because some people think that the notary also needs to initial the will, when in fact, that is not the case. An initial on a page indicates that the person initialling has reviewed the contents of the page. Most notaries, including all of our Notaries at Walk-In Notary, do not review the contents of documents such as wills. Therefore, we cannot initial the pages. Our role is to commission affidavits of execution to a will and stamp the will with an exhibit stamp, as discussed above.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <h3>What to bring to our office:</h3>
+                            <ul class="bullet-list">
+                                <li>The attorney (or the attorney's spouse or partner);</li>
+                                <li>The grantor's spouse or partner; the child of the grantor (or someone who is treated as their child);</li>
+                                <li>A person whose property is under guardianship or has a guardian of the person</li>
+                                <li>A person who is less than 18 years of age</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <h3>Affidavits of Execution (POAs):</h3>
+                            <p>Affidavits of execution are not as crucial for POAs as they are for wills, however, it is still a good idea to have at least one affidavit of execution for one of the witnesses.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <h3>Certified Copies:</h3>
+                            <p>In some cases, a third party, such as a bank, might request that you provide a notarized copy of a will or POAs. In this case we would make a photocopy of an original will and/or POA and state on the photocopy that the copy is a true copy of the original which we have seen. Anyone can bring the original document for us to certify because we do not need to witness anyone's signature.</p>
+                            <p>Therefore, when someone asks you to provide a notarized will, ask for clarification. Ask: "Do you want me to have a notary witness the signature of the witnesses on an affidavit of execution or do you want me to have the notary make a copy of the original will and certify that the copy is a true copy of the original?"</p>
+                            <p>Please note, that in the example above, the Notary will not know what the bank wants from you. You have to find out. At Walk-In Notary, we do not contact third parties (i.e. the recipient) on your behalf. And without communicating with the recipient there is no way to know exactly what they require. You can read more about our policies and requirements on our instructions page.</p>
+                            <p>For information regarding the administration of wills, we recommend carefully reviewing Ontario's website on this topic.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p>in our all notary public and commissioner of oaths services are provided by a lawyer, who are licensed by the Law Society of Ontario: we can help you in Last Will, Living Will, Power of Attorney, Opinion Letters, ILA, Family/Domestic Agreements Real Estate Closings etc for more detail you can contact our office or visit us at www.vmostlaw.com</p>
+                        </div>
+                        
+                        <a href="#contact" class="btn mt-2">Book your Consultation</a>
+                    </div>
+                </div>
+                <div class="side-col">
+                    <div class="glass-card sticky-form" style="position: sticky; top: 100px;">
+                        <h3>GET A QUOTE TODAY</h3>
+                        <form>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"></div>
+                            <div class="form-group"><input type="email" class="form-control" placeholder="Email Address"></div>
+                            <div class="form-group"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                            <div class="form-group"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+                            <button type="button" class="btn" style="width:100%">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: ILA -->
+        <section id="ila" class="spa-section">
+            <div class="service-subnav-bar">
+                <div class="service-subnav-container">
+                    <a href="#notarization" class="service-subnav-item">
+                        <span>Notarization &amp;</span>
+                        <span>Commissioning</span>
+                    </a>
+                    <a href="#realestate" class="service-subnav-item">
+                        <span>Real Estate</span>
+                        <span>Transaction</span>
+                    </a>
+                    <a href="#wills" class="service-subnav-item">
+                        <span>Wills &amp; Power of</span>
+                        <span>Attorney</span>
+                    </a>
+                    <a href="#ila" class="service-subnav-item">
+                        <span>ILA &amp; Opinion</span>
+                        <span>Letter</span>
+                    </a>
+                    <a href="#drafting" class="service-subnav-item">
+                        <span>Drafting &amp;</span>
+                        <span>Vetting</span>
+                    </a>
+                    <a href="#fees" class="service-subnav-item">
+                        <span>Fees &amp;</span>
+                        <span>Pricing</span>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-layout">
+                <div class="main-col">
+                    <div class="glass-card">
+                        <h2>ILA and Opinion Letter</h2>
+                        <h4 style="color: var(--text-muted); font-family: var(--font-body); font-weight: normal; margin-bottom: 2rem;">Need a drafting of your personal Living Will, Last Will & Continuing Power of attorney?</h4>
+                        
+                        <div class="content-block">
+                            <p><strong>Wills and Estate:</strong> While you may find it challenging to decide what you should leave behind and who should be entitled to your possessions after your passing, it's always a better idea to make such preparations beforehand for inevitable circumstances. It's no surprise that an individual's death can result in emotional and financial burdens among their family members and loved ones. Furthermore, it can even increase their legal obligations. However, written instructions in the form of wills can be of great help. Your will and estate distribution will be just as thorough and streamlined as detailed and specific your plan is. At VMOST we can assist you in such matters.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p><strong>Last Will and Testament</strong> - Your Last Will and Testament is a legal document that outlines how your assets should be divided and your estate should be dealt with upon your death. It lets you decide who receives your property and possessions and name a trustee (or executor) to manage your final affairs giving you the assurance that your final wishes will be carried out as you intended.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p><strong>Health Care Directive / Living Will</strong> - A Power of Attorney for Personal Care gives an individual you trust the legal authority to make medical and long-term care decisions for you when you are unable to do so. This can include things such as your meals, housing, hygiene, nutrition, or anything else pertaining to your health and well-being.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p><strong>Power of Attorney P.O.A. (Continuing)</strong> - A Will can only become valid once you pass away. For instances where you become unable to make vital decisions or understand its consequences because of an illness, injury, or age, VMOST Law will draft you a Power of Attorney (POA). It is a document you draft voluntarily with the help of our Wills and Estate lawyers. A POA gives others legal authority to act on your behalf when you are unable to care for yourself or want help because of age or infirmity.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p><strong>P.O.A. (Property)</strong> - A Power of Attorney for Property gives an individual you trust the legal authority to make decisions about your assets if you are unable to. This can include things such as paying off your debt and bills, collecting money owed to you, or managing your real estate.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p><strong>Probate Without a Will</strong> - When a friend or loved one dies intestate without a Will, their real property and personal possessions are distributed to specific beneficiaries, regardless of what their last wishes may have been. A probate allows you to act as the personal representative or executor (also called estate trustee) for an Ontario resident.</p>
+                        </div>
+                        
+                        <div class="content-block mt-2">
+                            <p><strong>Probate With a Will</strong> - As an Estate Trustee, you will need to apply to the Ontario Superior Court of Justice to get court authorization to act on the deceased's behalf. A probate certificate allows you to access financial accounts, settle debts, pay final income taxes, and use the deceased's assets to pay mortgages and other estate expenses. At VMOST we help you to prepare sworn and notarized affidavits to make court applications for a certificate of appointment as an estate trustee with a Will. We give you practical legal advice at affordable fees or referrals to services that can assist you. We answer all your questions to make administering a final estate easier.</p>
+                        </div>
+                        
+                        <p class="mt-2" style="font-weight: bold; color: var(--accent-gold); font-size: 1.2rem;">Basic Package $299cad onward</p>
+                        
+                        <a href="#contact" class="btn mt-2">Book your Consultation</a>
+                    </div>
+                </div>
+                <div class="side-col">
+                    <div class="glass-card sticky-form" style="position: sticky; top: 100px;">
+                        <h3>GET A QUOTE TODAY</h3>
+                        <form>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"></div>
+                            <div class="form-group"><input type="email" class="form-control" placeholder="Email Address"></div>
+                            <div class="form-group"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+                            <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+                            <div class="form-group"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+                            <button type="button" class="btn" style="width:100%">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3 class="footer-heading" style="font-size: 1.2rem; color: var(--accent-gold-light);">KITCHENER Notary Public & Commissioner</h3>
+                <p style="color: rgba(255,255,255,0.75); margin-bottom: 1rem;">Providing professional and reliable notary services in Kitchener, ON.</p>
+                <a href="#contact" style="font-weight: 600;">Contact Us <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></a>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#fees">Fees</a></li>
+                    <li><a href="#faq">Faq</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#notarization">Notarization & Commissioning Services</a></li>
+                    <li><a href="#wills">Will & POA Drafting</a></li>
+                    <li><a href="#ila">ILA & Opinion Letters</a></li>
+                    <li><a href="#realestate">Real Estate Transactions</a></li>
+                    <li><a href="#drafting">Drafting & Vetting of Contracts & Agreements</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">Location</h3>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2896.790518337854!2d-80.49001152431795!3d43.44415816590209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf4fc62a5b7c7%3A0xc32c5890c01d4a0a!2s900%20Guelph%20St%20%23217%2C%20Kitchener%2C%20ON%20N2H%205Z6!5e0!3m2!1sen!2sca!4v1689258019688!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 KITCHENER Notary Public All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- INLINE JAVASCRIPT -->
+    <script>
+        // --- Bulletproof SPA Navigation Engine ---
+        function navigateToSection(targetHash) {
+            let hash = targetHash || window.location.hash;
+            if (!hash || hash === '#' || hash === '#_=_') {
+                hash = '#home';
+            }
+
+            const targetId = hash.replace('#', '');
+            const sections = document.querySelectorAll('.spa-section');
+            let matched = false;
+
+            sections.forEach(sec => {
+                if (sec.id === targetId) {
+                    sec.style.setProperty('display', 'block', 'important');
+                    sec.style.setProperty('opacity', '1', 'important');
+                    sec.classList.add('active');
+                    matched = true;
+                } else {
+                    sec.style.setProperty('display', 'none', 'important');
+                    sec.style.setProperty('opacity', '0', 'important');
+                    sec.classList.remove('active');
+                }
+            });
+
+            if (!matched) {
+                const homeSec = document.getElementById('home');
+                if (homeSec) {
+                    homeSec.style.setProperty('display', 'block', 'important');
+                    homeSec.style.setProperty('opacity', '1', 'important');
+                    homeSec.classList.add('active');
+                }
+                hash = '#home';
+            }
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'instant' });
+
+            // Update navbar active link styling
+            document.querySelectorAll('.nav-item').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === hash || (hash !== '#home' && href === '#notarization' && ['#notarization', '#realestate', '#wills', '#ila', '#drafting'].includes(hash))) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Update active state in service subnav
+            document.querySelectorAll('.service-subnav-item').forEach(link => {
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Close mobile menu and dropdowns
+            const navMenu = document.querySelector('.nav-links');
+            if (navMenu) navMenu.classList.remove('active');
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+
+            // Reveal elements inside target section
+            const activeSec = document.querySelector('.spa-section.active');
+            if (activeSec) {
+                activeSec.querySelectorAll('.reveal, .stagger-children').forEach(el => {
+                    el.classList.add('revealed');
+                });
+            }
+        }
+
+        // Global Click Interceptor & Router
+        document.addEventListener('click', (e) => {
+            const toggle = e.target.closest('.dropdown-toggle');
+            if (toggle) {
+                e.preventDefault();
+                e.stopPropagation();
+                const dropdown = toggle.closest('.dropdown');
+                if (dropdown) dropdown.classList.toggle('open');
+                return;
+            }
+
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+            }
+
+            const link = e.target.closest('a[href^="#"]');
+            if (link) {
+                const href = link.getAttribute('href');
+                if (href && href !== '#' && href !== 'javascript:void(0)') {
+                    e.preventDefault();
+                    if (window.location.hash !== href) {
+                        history.pushState(null, null, href);
+                    }
+                    navigateToSection(href);
+                }
+            }
+        });
+
+        window.addEventListener('hashchange', () => navigateToSection());
+        window.addEventListener('popstate', () => navigateToSection());
+        window.addEventListener('load', () => navigateToSection());
+        document.addEventListener('DOMContentLoaded', () => {
+            navigateToSection();
+
+            // Mobile Menu Controls
+            const hamburger = document.querySelector('.hamburger');
+            const closeMenu = document.querySelector('.close-menu');
+            const navMenu = document.querySelector('.nav-links');
+
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    if (navMenu) navMenu.classList.add('active');
+                });
+            }
+
+            if (closeMenu) {
+                closeMenu.addEventListener('click', () => {
+                    if (navMenu) navMenu.classList.remove('active');
+                });
+            }
+
+            // Accordion (FAQ) Logic
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        if (icon) { icon.classList.remove('fa-chevron-up'); icon.classList.add('fa-chevron-down'); }
+                    } else {
+                        document.querySelectorAll('.accordion-content').forEach(item => item.style.maxHeight = null);
+                        document.querySelectorAll('.accordion-header i').forEach(i => {
+                            i.classList.remove('fa-chevron-up'); i.classList.add('fa-chevron-down');
+                        });
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        if (icon) { icon.classList.remove('fa-chevron-down'); icon.classList.add('fa-chevron-up'); }
+                    }
+                });
+            });
+
+            // Smooth counter animation for pricing
+            function animateCounter(el, target, duration) {
+                let start = 0;
+                const step = target / (duration / 16);
+                function update() {
+                    start += step;
+                    if (start >= target) {
+                        el.textContent = '$' + target;
+                        return;
+                    }
+                    el.textContent = '$' + Math.floor(start);
+                    requestAnimationFrame(update);
+                }
+                update();
+            }
+
+            const priceTag = document.querySelector('.price-tag');
+            if (priceTag) {
+                const priceObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounter(priceTag, 30, 1000);
+                            priceObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                priceObserver.observe(priceTag);
+            }
+
+            // Form Validation & Mailto Handler
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    sendMailto(form);
+                });
+                
+                const submitBtn = form.querySelector('.btn-submit, .btn[type="button"], button');
+                if (submitBtn) {
+                    submitBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        sendMailto(form);
+                    });
+                }
+            });
+
+            function validateForm(form) {
+                let isValid = true;
+
+                // Remove existing error elements and invalid classes
+                form.querySelectorAll('.error-msg').forEach(el => el.remove());
+                form.querySelectorAll('.form-control').forEach(el => el.classList.remove('is-invalid'));
+
+                const nameEl = form.querySelector('input[placeholder*="Name"]');
+                const phoneEl = form.querySelector('input[placeholder*="Phone"]');
+                const emailEl = form.querySelector('input[placeholder*="Email"]');
+                const msgEl = form.querySelector('textarea');
+
+                // Validate Name
+                if (nameEl && (!nameEl.value.trim() || nameEl.value.trim().length < 2)) {
+                    showFieldError(nameEl, 'Please enter your full name');
+                    isValid = false;
+                }
+
+                // Validate Phone Number
+                if (phoneEl) {
+                    const digits = phoneEl.value.replace(/\D/g, '');
+                    if (!phoneEl.value.trim() || digits.length < 7) {
+                        showFieldError(phoneEl, 'Please enter a valid phone number');
+                        isValid = false;
+                    }
+                }
+
+                // Validate Email Address
+                if (emailEl) {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailEl.value.trim() || !emailPattern.test(emailEl.value.trim())) {
+                        showFieldError(emailEl, 'Please enter a valid email address');
+                        isValid = false;
+                    }
+                }
+
+                // Validate Message
+                if (msgEl && (!msgEl.value.trim() || msgEl.value.trim().length < 4)) {
+                    showFieldError(msgEl, 'Please enter your message');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            function showFieldError(inputEl, message) {
+                inputEl.classList.add('is-invalid');
+                const formGroup = inputEl.closest('.form-group') || inputEl.parentElement;
+                let errSpan = formGroup.querySelector('.error-msg');
+                if (!errSpan) {
+                    errSpan = document.createElement('span');
+                    errSpan.className = 'error-msg';
+                    formGroup.appendChild(errSpan);
+                }
+                errSpan.textContent = message;
+
+                // Clear error dynamically as user types
+                inputEl.addEventListener('input', function onInput() {
+                    if (inputEl.value.trim()) {
+                        inputEl.classList.remove('is-invalid');
+                        if (errSpan) errSpan.remove();
+                        inputEl.removeEventListener('input', onInput);
+                    }
+                });
+            }
+
+            function sendMailto(form) {
+                if (!validateForm(form)) {
+                    return;
+                }
+
+                const nameEl = form.querySelector('input[placeholder*="Name"]');
+                const phoneEl = form.querySelector('input[placeholder*="Phone"]');
+                const emailEl = form.querySelector('input[placeholder*="Email"]');
+                const subjectEl = form.querySelector('input[placeholder*="Subject"]');
+                const msgEl = form.querySelector('textarea');
+
+                const name = nameEl ? nameEl.value.trim() : '';
+                const phone = phoneEl ? phoneEl.value.trim() : '';
+                const email = emailEl ? emailEl.value.trim() : '';
+                const rawSubject = (subjectEl && subjectEl.value.trim()) ? subjectEl.value.trim() : 'Kitchener Notary Inquiry';
+                const message = msgEl ? msgEl.value.trim() : '';
+
+                const mailtoRecipient = 'kitchenernotary@hotmail.com';
+                const emailSubject = encodeURIComponent(`Notary Inquiry: ${rawSubject}`);
+                const emailBody = encodeURIComponent(
+                    `Hello Kitchener Notary Public,\n\n` +
+                    `You have received a new inquiry from your website form:\n\n` +
+                    `--------------------------------------------------\n` +
+                    `Full Name: ${name}\n` +
+                    `Phone Number: ${phone}\n` +
+                    `Email Address: ${email}\n` +
+                    `Subject: ${rawSubject}\n` +
+                    `--------------------------------------------------\n\n` +
+                    `Message:\n${message}\n\n` +
+                    `Sent from kitchenernotarypublic.ca`
+                );
+
+                window.location.href = `mailto:${mailtoRecipient}?subject=${emailSubject}&body=${emailBody}`;
+
+                setTimeout(() => {
+                    form.reset();
+                    form.querySelectorAll('.error-msg').forEach(el => el.remove());
+                    form.querySelectorAll('.form-control').forEach(el => el.classList.remove('is-invalid'));
+                }, 800);
+            }
+        });
+    </script>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/19052261009" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip-text">Chat on WhatsApp (+1 905 226 1009)</span>
+    </a>
+</body>
+</html>
